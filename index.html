@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Optimized Deep Learning | ARAMIS Lab</title>
+  <link rel="icon" href="/images/aramis-icon.png">
+
+  <style>
+    :root {
+      --primary: #231879;
+      --primary-light: rgb(254, 76, 28, 0.25);
+      --background: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 70px 24px;
+    }
+
+    .intro {
+      margin-bottom: 45px;
+      text-align: center;
+    }
+
+    .logo-image {
+      width: 50px;
+      height: 50px;
+    }
+
+    h1 {
+      margin: 12px 0;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+    }
+
+    .tagline {
+      margin: 0;
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+      counter-reset: card-number -1;
+    }
+
+    .menu-card {
+      display: block;
+      padding: 28px;
+      color: var(--text);
+      text-decoration: none;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(31, 41, 55, 0.08);
+      counter-increment: card-number;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px var(--primary-light);
+    }
+
+    .menu-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.25rem;
+    }
+
+    .menu-card h2:before {
+      content: counter(card-number) ". ";
+    }
+
+    .menu-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    footer {
+      padding: 25px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <img
+        class="logo-image"
+        src="/images/aramis-icon.png"
+        alt="ARAMIS Lab logo"
+      >
+
+      <h1 id="page-title">Optimized Deep Learning</h1>
+      <p class="tagline">Accelerate your deep learning workflows!</p>
+    </section>
+
+    <section class="menu-grid" aria-label="Topics">
+      <a class="menu-card" href="introduction.html">
+        <h2>GPUs and supercomputers</h2>
+        <p>What are GPUs? Why are they used in deep learning?</p>
+      </a>
+
+      <a class="menu-card" href="introduction.html">
+        <h2>Introduction</h2>
+        <p>Why optimise your deep learning workflow? Overview of the common approaches</p>
+      </a>
+
+      <a class="menu-card" href="introduction.html">
+        <h2>Profiler</h2>
+        <p>Where is the bottleneck?</p>
+      </a>
+
+      <a class="menu-card" href="introduction.html">
+        <h2>With a single GPU</h2>
+        <p>Easy tips to better use your GPU</p>
+      </a>
+
+      <a class="menu-card" href="data-parallelism.html">
+        <h2>Data Parallelism</h2>
+        <p>Increase batch size by parallelizing across multiple GPUs</p>
+      </a>
+
+      <a class="menu-card" href="data-parallelism.html">
+        <h2>Model Parallelism</h2>
+        <p>Model sharding across multiple GPUs to train bigger models</p>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 ARAMIS Lab
+  </footer>
+</body>
+</html>
