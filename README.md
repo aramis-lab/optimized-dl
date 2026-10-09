@@ -1,16 +1,9 @@
-# optimized-dl
+# Optimized Deep Learning
 
 A documentation to accelerate your deep learning experiments.
 
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+See the presentations here: https://www.aramislab.fr/optimized-dl/
 
-To start the slide show:
+___
 
-- `npm install`
-- `npm run dev`
-- visit <http://localhost:3030>
-
-Edit the [slides.md](./slides.md) to see the changes.
-
-Learn more about Slidev at the [documentation](https://sli.dev/).
-
+This repo follows [this template](https://github.com/aramis-lab/multiple-dev-presentations).
