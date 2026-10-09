@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "slidev build",
-    "build:site": "rm -rf public & for f in pages/*.md; do n=$(basename \"$f\" .md); npm run build -- \"$f\" --base \"/optimized-dl/$n/\" --out \"../public/$n\" || exit 1; done && cp -R index.html images public/",
-    "preview:site": "mkdir -p /tmp/optimized-dl-preview && ln -sfn \"$PWD/public\" /tmp/optimized-dl-preview/optimized-dl && echo 'Open http://localhost:3000/optimized-dl/' && npx serve /tmp/optimized-dl-preview --symlinks",
+    "build:site": "P=${SITE_PREFIX:-optimized-dl}; rm -rf public & for f in pages/*.md; do n=$(basename \"$f\" .md); npm run build -- \"$f\" --base \"/$P/$n/\" --out \"../public/$n\" || exit 1; done && cp -R index.html images public/",
+    "preview:site": "P=${SITE_PREFIX:-optimized-dl}; mkdir -p /tmp/$P-preview && ln -sfn \"$PWD/public\" /tmp/$P-preview/$P && echo \"Open http://localhost:3000/$P/\" && npx serve /tmp/$P-preview --symlinks",
     "site": "npm run build:site && npm run preview:site",
     "dev": "slidev --open",
     "export": "slidev export"
