@@ -25,7 +25,7 @@ jobs:
         run: npm ci   # preferred to 'npm install'
 
       - name: Build
-        run: npm run build -- --base /${{github.event.repository.name}}/
+        run: npm run build -- --base /${{github.event.repository.name}}/ --out public
         # In commands like <script type="module" src="/assets/index-abc123.js"></script>,
         # a URL beginning with "/"" means “start from the domain root”.
         # So, the browser would request https://aramislab.github.io/assets/index-abc123.js,
